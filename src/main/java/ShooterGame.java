@@ -1,16 +1,12 @@
 
-public class ShooterGame {
+abstract class ShooterGame {
     public String name;
-    protected boolean has_gun;
+    protected boolean hasGun;
     public int pov;    
 
-    //public void setpov(int pov){
-        //this.pov = pov;
-    //}
-
-public ShooterGame(String name, int pov, boolean has_gun){
+public ShooterGame(String name, int pov, boolean hasGun){
     this.name = name;
     this.pov = 1;
-    this.has_gun = true;
+    this.hasGun = true;
     }
 }

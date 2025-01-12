@@ -1,11 +1,9 @@
 public class HalfLife extends FPS{
-    public boolean has_zombies;
-    public int playable_characters;
+    public boolean hasZombies;
+    public int playableCharacters;
 
-public HalfLife(String name, String genre, int releaseYear, boolean co_op){
-    super(name, 1, true, "horror shooter", co_op, releaseYear);
-    this.genre = "horror";
-    this.co_op = false;
-    this.releaseYear = 1998;
+    public HalfLife(String name, boolean hasZombies, int releaseYear){
+        super(name, 1, true, "Horror shooter", false, releaseYear);
+        this.hasZombies = true;
 }
 }

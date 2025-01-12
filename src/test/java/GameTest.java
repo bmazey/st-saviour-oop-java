@@ -11,7 +11,7 @@ public class GameTest {
         assert b1 instanceof Borderlands;
         assert b1 instanceof ShooterGame;
 
-        Borderlands b2 = new Borderlands("Borderlands II", "Maya", 2012);
+        Borderlands b2 = new Borderlands("Borderlands 2", "Maya", 2012);
         assert b2 instanceof Borderlands;
         assert b2 instanceof ShooterGame;
 
@@ -19,7 +19,7 @@ public class GameTest {
         assert bT instanceof Borderlands;
         assert bT instanceof ShooterGame;
 
-        Borderlands b3 = new Borderlands("Borderlands III", "Moze", 2019);
+        Borderlands b3 = new Borderlands("Borderlands 3", "Moze", 2019);
         assert b3 instanceof Borderlands;
         assert b3 instanceof ShooterGame;
 

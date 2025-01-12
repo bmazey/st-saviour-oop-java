@@ -1,9 +1,17 @@
 public class Borderlands extends FPS{
     public boolean humor = true;
-    protected String vault_hunter;
+    protected String vaultHunter;
+    private boolean hasSiren = true;
 
-    public Borderlands(String name, String vault_hunter, int releaseYear){
+    void setHasSiren(boolean siren){
+        this.hasSiren = siren;
+    }
+    
+    public Borderlands(String name, String vaultHunter, int releaseYear){
         super(name, 1, true, "looter shooter", true, releaseYear);
-        this.vault_hunter = vault_hunter;
+        this.vaultHunter = vaultHunter;
+    }
+    public boolean getHasSiren(){
+        return this.hasSiren;
     }
 }
