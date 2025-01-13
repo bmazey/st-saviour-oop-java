@@ -7,8 +7,8 @@ public class Borderlands extends FPS{
         this.hasSiren = siren;
     }
     
-    public Borderlands(String name, String vaultHunter, int releaseYear){
-        super(name, 1, true, "looter shooter", true, releaseYear);
+    public Borderlands(String name, String vaultHunter, int players, int releaseYear){
+        super(name, 1, true, "looter shooter", true, 4, releaseYear);
         this.vaultHunter = vaultHunter;
     }
     public boolean getHasSiren(){
