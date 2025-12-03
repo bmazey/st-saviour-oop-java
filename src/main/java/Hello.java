@@ -1,5 +1,9 @@
 public class Hello {
     public static void main(String[] args) {
-        System.out.println("new dawn, new day");
+        Cake first = new Cake();
+        System.out.println(first.eat());
+
+        Cake second = new Cake(3, true, true, "red velvet");
+        System.out.println(second.eat());
     }
 }
