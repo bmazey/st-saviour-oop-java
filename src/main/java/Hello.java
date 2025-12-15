@@ -1,9 +1,21 @@
+import oop.Animal;
+import oop.Mammal;
+import oop.Platypus;
+
 public class Hello {
     public static void main(String[] args) {
-        Cake first = new Cake();
-        System.out.println(first.eat());
+         // System.out.println("new dawn, new day.");
+         Platypus perry = new Platypus("Perry", 0);
+         System.out.println(perry.eat("shrimp"));
+         System.out.println(perry.sleep());
 
-        Cake second = new Cake(3, true, true, "red velvet");
-        System.out.println(second.eat());
+         assert perry instanceof Animal;
+         assert perry instanceof Mammal;
+         assert perry instanceof Platypus;
+
+        perry.setName("Fineous");
+        System.out.println(perry.eat("shrimp"));
+        System.out.println(perry.sleep());
+
     }
 }
