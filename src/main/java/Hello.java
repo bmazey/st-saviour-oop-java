@@ -1,21 +1,23 @@
-import oop.Animal;
-import oop.Mammal;
-import oop.Platypus;
+import java.util.ArrayList;
 
 public class Hello {
     public static void main(String[] args) {
-         // System.out.println("new dawn, new day.");
-         Platypus perry = new Platypus("Perry", 0);
-         System.out.println(perry.eat("shrimp"));
-         System.out.println(perry.sleep());
 
-         assert perry instanceof Animal;
-         assert perry instanceof Mammal;
-         assert perry instanceof Platypus;
+        // ArrayList demonstration.
+        ArrayList<String> jolibee = new ArrayList<String>();
+        jolibee.add("Honey BBQ Tenders 6pc");
+        jolibee.add("XL Lemonade");
+        jolibee.add("Spaghetti");
+        jolibee.add(1, "French Fries");
 
-        perry.setName("Fineous");
-        System.out.println(perry.eat("shrimp"));
-        System.out.println(perry.sleep());
+        for(String item : jolibee) {
+            System.out.println(item);
+        }
 
+        if (jolibee.contains("Small Lemonade")) {
+            System.out.println("Small Lemonade is in the list!");
+        } else {
+            System.out.println("Small Lemonade is NOT in the list!");
+        }
     }
 }
