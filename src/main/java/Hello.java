@@ -4,41 +4,52 @@ import java.time.Instant;
 public class Hello {
     public static void main(String[] args) {
 
-        // Record start of method call.
-        Instant start = Instant.now();
+        int[] numbers = {1, 3, 5, 6, 7, 9, 11, 13, 15, 19, 21};
 
-        // Try with 45 ...
-        for (int i = 0; i < 20; i++) {
-            System.out.print(recursiveFibonacci(i) + " ");
+        int key = 24;
+
+        int position = Searcher.recursiveBinary(numbers, key, 0, numbers.length - 1);
+        if (position != -1) {
+            System.out.println("Key " + key + " found at position " + position);
+        } else {
+            System.out.println("Key " + key + " not found!");
         }
 
-        System.out.println("");
+        // // Record start of method call.
+        // Instant start = Instant.now();
 
-        // Record end of method call.
-        Instant end = Instant.now();
+        // // Try with 45 ...
+        // for (int i = 0; i < 20; i++) {
+        //     System.out.print(recursiveFibonacci(i) + " ");
+        // }
 
-        // Compute duration of execution ...
-        Duration elapsed = Duration.between(start, end);
+        // System.out.println("");
 
-        System.out.println("Time to execute recursive fibonacci: " + elapsed.getSeconds() + " seconds!");
+        // // Record end of method call.
+        // Instant end = Instant.now();
 
-        // Now call dynamic implementation.
-        start = Instant.now();
+        // // Compute duration of execution ...
+        // Duration elapsed = Duration.between(start, end);
 
-        // Try with 45 ...
-        for (int i = 0; i < 20; i++) {
-            System.out.print(dynamicFibonacci(i) + " ");
-        }
+        // System.out.println("Time to execute recursive fibonacci: " + elapsed.getSeconds() + " seconds!");
 
-        System.out.println("");
+        // // Now call dynamic implementation.
+        // start = Instant.now();
 
-        // Record end of method call.
-        end = Instant.now();
+        // // Try with 45 ...
+        // for (int i = 0; i < 100; i++) {
+        //     System.out.print(dynamicFibonacci(i) + " ");
+        // }
 
-        // Compute duration of execution ...
-        elapsed = Duration.between(start, end);
+        // System.out.println("");
 
-        System.out.println("Time to execute dynamic fibonacci: " + elapsed.getSeconds() + " seconds!");
+        // // Record end of method call.
+        // end = Instant.now();
+
+        // // Compute duration of execution ...
+        // elapsed = Duration.between(start, end);
+
+        // System.out.println("Time to execute dynamic fibonacci: " + elapsed.getSeconds() + " seconds!");
     }
 
     public static int recursiveFibonacci(int x) {
